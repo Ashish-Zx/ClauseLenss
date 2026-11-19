@@ -1,0 +1,5 @@
+# Automatic HTTPS via Let's Encrypt for your API domain.
+{$DOMAIN} {
+	encode gzip
+	reverse_proxy api:8000
+}

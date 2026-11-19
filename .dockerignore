@@ -1,0 +1,10 @@
+.git
+**/__pycache__
+**/*.pyc
+backend/.venv
+backend/tests
+backend/data/raw
+backend/data/processed
+frontend
+.env
+**/*.md

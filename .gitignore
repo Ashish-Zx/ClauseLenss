@@ -1,0 +1,55 @@
+# ── Environment & secrets ─────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.crt
+
+# ── Python ────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.cover
+.venv/
+venv/
+env/
+
+# ── Backend data artifacts ────────────────────────────
+# NOTE: backend/data/indices/** is intentionally tracked — the prebuilt
+# Chroma + BM25 indices are baked into the Docker image so the deployed
+# API has data on first boot (no re-ingestion required).
+# Raw source PDFs are not needed at deploy time (indices are committed).
+backend/data/raw/
+# Processed documents
+backend/data/processed/
+
+# ── Frontend / Node ───────────────────────────────────
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/dist/
+frontend/next-env.d.ts
+npm-debug.log*
+yarn-error.log*
+
+# ── OS / editors / IDE ────────────────────────────────
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.swp
+*.swo
+*~
